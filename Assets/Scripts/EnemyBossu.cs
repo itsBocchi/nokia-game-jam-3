@@ -2,30 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SmolEnemy : MonoBehaviour
+public class EnemyBossu : MonoBehaviour
 {
     // Start is called before the first frame update
     public bool afectedByLight;
     public int maxSpeed = 2;
-    int counter = 0;
-    private Rigidbody2D rb;
+    public Transform player;
     void Start()
     {
-        rb = gameObject.GetComponent<Rigidbody2D>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         //mover en direccion del jugador
+        Vector3 dif = Vector3.Normalize(gameObject.transform.position-player.position);
         if (true)
         {
-            rb.AddForce(maxSpeed) = new Vector3 ()
+            rb.AddForce(maxSpeed*dif,ForceMode2D.Impulse); 
         }
-        else
-        {
 
-        }
     }
 
 }

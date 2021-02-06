@@ -9,7 +9,7 @@ public class MainCharacterController : MonoBehaviour
     float horizontal = 0, vertical = 0;
     public float speed = 3f;
     private Rigidbody2D rb;
-
+    public bool itemGet;
     public GameObject Spritemask;
     GameObject mask;
     SpriteRenderer m_SpriteRenderer;
@@ -57,6 +57,7 @@ public class MainCharacterController : MonoBehaviour
         {
             mask.transform.eulerAngles = new Vector3(0,0,-90);
         }
+
     }
 
     void FixedUpdate()

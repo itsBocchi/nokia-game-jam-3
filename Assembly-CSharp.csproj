@@ -40,8 +40,10 @@
      <Compile Include="Assets\Scripts\MainCharacterController.cs" />
      <Compile Include="Assets\Scripts\SeePicture.cs" />
      <Compile Include="Assets\Scripts\TeleportTo.cs" />
-     <Compile Include="Assets\Scripts\SmolEnemy.cs" />
      <Compile Include="Assets\Scripts\Spawner.cs" />
+     <Compile Include="Assets\Scripts\EnemyFollow.cs" />
+     <Compile Include="Assets\Scripts\PickItem.cs" />
+     <Compile Include="Assets\Scripts\EnemyBossu.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.2.3f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
