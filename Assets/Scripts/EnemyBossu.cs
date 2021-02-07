@@ -10,7 +10,7 @@ public class EnemyBossu : MonoBehaviour
     public Transform player;
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -20,7 +20,7 @@ public class EnemyBossu : MonoBehaviour
         Vector3 dif = Vector3.Normalize(gameObject.transform.position-player.position);
         if (true)
         {
-            rb.AddForce(maxSpeed*dif,ForceMode2D.Impulse); 
+            
         }
 
     }
