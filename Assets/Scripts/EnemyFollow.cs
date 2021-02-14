@@ -6,7 +6,6 @@ public class EnemyFollow : MonoBehaviour
 {
     public float speed;
     private Transform target;
-
     void Start()
     {
         target = GameObject.FindGameObjectWithTag("PlayerUnit").GetComponent<Transform>();
@@ -14,12 +13,9 @@ public class EnemyFollow : MonoBehaviour
 
     void Update()
     {
-        if(Vector2.Distance(transform.position, target.position) < 6)
+        if(Vector2.Distance(transform.position, target.position) > 2)
         {
-            if(Vector2.Distance(transform.position, target.position) > 2)
-            {
-                transform.position = Vector2.MoveTowards(transform.position, new Vector2 (target.position.x, target.position.y), speed * Time.deltaTime);
-            }
+            transform.position = Vector2.MoveTowards(transform.position, new Vector2 (target.position.x, target.position.y), speed * Time.deltaTime);
         }
         if (transform.position.x - target.position.x > 0)  //Si hay una tecla presionada al + personaje se voltea//
         {

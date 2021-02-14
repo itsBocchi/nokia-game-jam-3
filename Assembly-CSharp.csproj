@@ -37,13 +37,14 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\PlayController.cs" />
+     <Compile Include="Assets\Scripts\Spawner.cs" />
      <Compile Include="Assets\Scripts\MainCharacterController.cs" />
+     <Compile Include="Assets\Scripts\EnemyBossu.cs" />
      <Compile Include="Assets\Scripts\SeePicture.cs" />
      <Compile Include="Assets\Scripts\TeleportTo.cs" />
-     <Compile Include="Assets\Scripts\Spawner.cs" />
-     <Compile Include="Assets\Scripts\EnemyFollow.cs" />
      <Compile Include="Assets\Scripts\PickItem.cs" />
-     <Compile Include="Assets\Scripts\EnemyBossu.cs" />
+     <Compile Include="Assets\Scripts\EnemyFollow.cs" />
+     <Compile Include="Assets\Scripts\StartScene.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.2.3f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -256,9 +257,6 @@
     </Reference>
     <Reference Include="UnityEditor.UnityConnectModule">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.2.3f1/Editor/Data/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
-    </Reference>
-    <Reference Include="Pathfinding.Ionic.Zip.Reduced">
-        <HintPath>C:/Users/crisa/Documents/UnityProjects/Nokia Jam 3/Assets/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.2.3f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -700,18 +698,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="AstarPathfindingProjectEditor.csproj">
-      <Project>{e87973a6-3041-4706-a31f-3ca15a557cb9}</Project>
-      <Name>AstarPathfindingProjectEditor</Name>
-    </ProjectReference>
-    <ProjectReference Include="AstarPathfindingProject.csproj">
-      <Project>{28ae5d9a-4d91-bdbf-79c7-6172ef438a8a}</Project>
-      <Name>AstarPathfindingProject</Name>
-    </ProjectReference>
-    <ProjectReference Include="PackageToolsEditor.csproj">
-      <Project>{45424ae1-f517-a72b-e086-86e62721a8c9}</Project>
-      <Name>PackageToolsEditor</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

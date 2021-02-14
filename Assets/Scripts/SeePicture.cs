@@ -25,12 +25,17 @@ public class SeePicture : MonoBehaviour
         }
     }
     void OnTriggerEnter2D(Collider2D other) {
-
-        inTriggerZone = true;
+        if(other.gameObject.tag == "PlayerUnit")
+        {
+            inTriggerZone = true;
+        }
     }
 
     void OnTriggerExit2D(Collider2D other) {
-        interfaceItem.SetActive(false);
-        inTriggerZone = false;
+        if(other.gameObject.tag == "PlayerUnit")
+        {
+            interfaceItem.SetActive(false);
+            inTriggerZone = false;
+        }
     }
 }

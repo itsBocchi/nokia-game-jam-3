@@ -11,6 +11,9 @@ public class MainCharacterController : MonoBehaviour
     private Rigidbody2D rb;
     public bool itemGet;
     public GameObject Spritemask;
+    public GameObject Inventory;
+    public GameObject Key;
+    bool keyGet;
     GameObject mask;
     SpriteRenderer m_SpriteRenderer;
 
@@ -58,6 +61,15 @@ public class MainCharacterController : MonoBehaviour
             mask.transform.eulerAngles = new Vector3(0,0,-90);
         }
 
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            OpenInventory();
+        }
+        if (Input.GetKeyDown(KeyCode.V))
+        {
+            keyGet = !keyGet;
+        }
+
     }
 
     void FixedUpdate()
@@ -65,5 +77,13 @@ public class MainCharacterController : MonoBehaviour
         rb.velocity = new Vector2(horizontal * speed, vertical * speed);
     }
 
+    void OpenInventory()
+    {
+        Inventory.SetActive(!Inventory.activeSelf);
+        if(keyGet)
+        {
+            Key.SetActive(!Key.activeSelf);
+        }
+    }
     
 }
